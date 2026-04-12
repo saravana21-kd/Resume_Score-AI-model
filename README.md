@@ -6,7 +6,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src=""Demo = Screenshot 2026-04-12 181310.png" width="400" height="400/">
+<img src="assets/demo1.png" width="700">
 
   
 <h2>🧐 Features</h2>
