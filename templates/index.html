@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Match Score</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page">
+        <div class="hero">
+            <h1>Resume Match Score</h1>
+            <p>Upload your resume PDF and paste the job description to get a clean compatibility score.</p>
+        </div>
+
+        <div class="card">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="alert">
+                        <ul>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            {% if score is not none %}
+                <div class="result-card">
+                    <span class="result-label">Compatibility Score</span>
+                    <strong>{{ score }}%</strong>
+                    <p>Resume file: {{ resume_filename or 'Uploaded resume' }}</p>
+                </div>
+            {% endif %}
+
+            <form action="{{ url_for('score') }}" method="post" enctype="multipart/form-data">
+                <label for="resume">Resume PDF</label>
+                <input type="file" id="resume" name="resume" accept="application/pdf" required>
+
+                <label for="job_desc">Job Description</label>
+                <textarea id="job_desc" name="job_desc" rows="8" placeholder="Paste the job description here" required>{{ job_desc }}</textarea>
+
+                <div class="button-row">
+                    <button type="submit" class="btn btn-primary">Compute Score</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function resetForm() {
+            const form = document.querySelector('form');
+            form.reset();
+        }
+    </script>
+</body>
+</html>
