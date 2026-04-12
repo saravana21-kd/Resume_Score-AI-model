@@ -3,6 +3,11 @@
 <p align="center"><img src="https://socialify.git.ci/saravana21-kd/Resume_Score-AI-model/image?custom_language=Python&amp;font=Jost&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Circuit+Board&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
 <p id="description">The Resume Score AI Model helps users evaluate how well their resume aligns with a specific job description. It uses text similarity techniques to calculate a score and identify how closely a candidate’s profile matches job requirements.</p>
+
+<h2>Project Screenshots:</h2>
+
+<img src=""Demo = Screenshot 2026-04-12 181310.png" width="400" height="400/">
+
   
 <h2>🧐 Features</h2>
 
