@@ -5,7 +5,6 @@
 <p id="description">The Resume Score AI Model helps users evaluate how well their resume aligns with a specific job description. It uses text similarity techniques to calculate a score and identify how closely a candidate’s profile matches job requirements.</p>
 
 
-
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features:
